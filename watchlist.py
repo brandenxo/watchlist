@@ -13,7 +13,7 @@ def remove_movie(watchlist):
     for movie in watchlist:
         if movie['title'] == remove_movie:
             print(f"Removing {movie['title']}...")
-            del movie['title']
+            del watchlist[movie]
 
 def mark_watched():
     pass
@@ -41,7 +41,6 @@ def main():
 
         if option == 1:
             watchlist = add_movie(watchlist)
-            print(watchlist[0]["title"])
         elif option == 2:
             remove_movie(watchlist)
         elif option == 3:
