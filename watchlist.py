@@ -43,11 +43,11 @@ def main():
             watchlist = add_movie(watchlist)
             print(watchlist[0]["title"])
         elif option == 2:
-            remove_movie()
+            remove_movie(watchlist)
         elif option == 3:
             mark_watched()
         elif option == 4:
-            show_watchlist()
+            show_watchlist(watchlist)
         elif option == 5:
             break
 
