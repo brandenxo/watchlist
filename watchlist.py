@@ -12,9 +12,11 @@ def remove_movie(watchlist):
 def mark_watched():
     pass
 
-def show_watchlist():
-    pass
-
+def show_watchlist(watchlist):
+    for movie in watchlist:
+        for key, value in movie.items():
+            print(f"{key}")
+            print(f"{value}")
 
 def main():
     movie = {}
