@@ -1,19 +1,22 @@
 def add_movie(watchlist):
     movie = {}
 
-    title = input("Enter movie title: ")
+    title = input("Enter movie title: ").title()
     movie["title"] = title
     watchlist.append(movie)
 
     return watchlist
 
 def remove_movie(watchlist):
-    remove_movie = input("Which movie would you like to remove?")
+    remove_movie = input("Which movie would you like to remove? ").title()
 
+    i = 0
     for movie in watchlist:
         if movie['title'] == remove_movie:
             print(f"Removing {movie['title']}...")
-            del watchlist[movie]
+            del watchlist[i]
+        else:
+            i += 1
 
 def mark_watched():
     pass
@@ -21,8 +24,9 @@ def mark_watched():
 def show_watchlist(watchlist):
     for movie in watchlist:
         for key, value in movie.items():
-            print(f"{key}")
-            print(f"{value}")
+            print(f"{key}.title(): {value}")
+            print(f"------------------")
+
 
 def main():
     watchlist = []
