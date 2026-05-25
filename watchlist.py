@@ -1,8 +1,14 @@
 def add_movie():
     pass
 
-def remove_movie():
-    pass
+def remove_movie(watchlist):
+    remove_movie = input("Which movie would you like to remove?")
+
+    for movie in watchlist:
+        if movie['title'] == remove_movie:
+            print(f"Removing {movie['title']}...")
+            del movie['title']
+            del movie['watched']
 
 def mark_watched():
     pass
