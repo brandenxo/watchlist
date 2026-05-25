@@ -8,7 +8,6 @@ def remove_movie(watchlist):
         if movie['title'] == remove_movie:
             print(f"Removing {movie['title']}...")
             del movie['title']
-            del movie['watched']
 
 def mark_watched():
     pass
